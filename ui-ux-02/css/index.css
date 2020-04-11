@@ -1,0 +1,208 @@
+* { box-sizing: border-box; }
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font: 1em helvetica, arial, sans-serif;
+  background-color: rgb(183, 243, 243);
+  color: rgb(183, 243, 243);
+  margin: 0em;
+}
+.menu{
+  display: flex;
+  justify-content: space-evenly;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  /* transform: rotate(90deg); */
+  background-color: #025159;
+  padding: 2em 2em 0 2em;
+  margin: 0em;
+  writing-mode: vertical-lr;
+  list-style: none;
+  z-index: 1;
+ }
+
+
+.demo {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+.carousel__container {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+.carousel__slide {
+  display: flex;
+  align-items: center;
+}
+.carousel__item {
+  flex: 0 0 100%;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+}
+.carousel__slide img {
+  width: 100%;
+  pointer-events: none;
+}
+#prevBtn,
+#nextBtn {
+  color: white;
+  font-size: 1em;
+}
+.carousel__button {
+  position: absolute;
+  width: 2em;
+  height: 3em;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: black;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel__dots {
+  display: flex;
+  flex: 0 0 100%;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  width: 2em;
+}
+.carousel__dots > li {
+  width: 2em;
+  height: 1em;
+  margin: 0 2em;
+  padding: 0;
+
+  cursor: pointer;
+}
+.carousel__dots > li > button {
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+
+  /* display: block; */
+
+  width: 1em;
+  height: 1em;
+
+  cursor: pointer;
+
+  color: transparent;
+  border: none;
+  outline: 0;
+  background-color: transparent;
+}
+.carousel__dots > li > button::before {
+  opacity: 0.5;
+  background-color: black;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.carousel__dots > li.slide-active > button::before {
+  opacity: 0.75;
+}
+
+ .handbook {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: tomato; */
+    display: flex;
+    color : #025159;
+   } 
+
+.book {
+	flex-shrink: 0;
+	width: 50vw;
+	height: 100%;	
+	background-size: cover;
+  background-position: center center;
+  padding: 0 10em 0 5em;
+
+
+}
+.book-name{
+  font-size: 1.5em;
+  padding: 0 2em 0 0;
+  font-family: 'Bowlby One SC', cursive;
+}
+
+.book-name h1{
+  font-size: 2.5rem;
+  padding: 0.5em 0;
+}
+
+.book-name p{
+ 
+}
+
+.book-img{
+
+  position: relative;
+  left: 60%;
+  bottom: 38%;
+  z-index: -1;
+}
+
+.book-img img{
+  height: 75vh;
+}
+
+.contactus{
+  background-color: #025159;
+  font-size: 1.3em;
+}
+
+.contactinfo{
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 0.7fr 0.01fr;
+  grid-template-rows: auto 1fr auto;
+  
+}
+
+.contactinfo section{
+  padding: 3em 2em;
+  outline: 0.1em solid;
+  outline-color: white;
+  text-align: center;
+  place-content: center;
+}
+
+.contactinfo :nth-child(3){
+  writing-mode: vertical-lr;
+}
+
+.contactinfo h2{
+  font-size: 2rem;
+}
+
+.contactinfo h2 :nth-child(1){
+  padding: 5em 0 0.2em 0;
+}
+
+.contactform{
+  padding: 1.5em;
+  font-size: 3em;
+  text-align: center;
+}
+
+.active{
+  color: white;
+}
